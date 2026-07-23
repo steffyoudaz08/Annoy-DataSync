@@ -1,23 +1,37 @@
 # Data License
 
-This file summarizes the license status for the released Annoy-DataSync datasets.
+This file documents the license status for the released Annoy-DataSync datasets by reusing the license information from the datasets' direct data source and the model used for synthesis. No new license is introduced here.
 
 ## Annoy-PythonEdu-Rs and Annoy-PythonEdu-Rs-Raw
 
-`Annoy-PythonEdu-Rs` and `Annoy-PythonEdu-Rs-Raw` are derived from the Python-Edu subset of [HuggingFaceTB/smollm-corpus](https://huggingface.co/datasets/HuggingFaceTB/smollm-corpus), which is distributed under the [Open Data Commons Attribution License (ODC-BY 1.0)](https://opendatacommons.org/licenses/by/1-0/).
+`Annoy-PythonEdu-Rs` and `Annoy-PythonEdu-Rs-Raw` are derived from the Python-Edu subset of [HuggingFaceTB/smollm-corpus](https://huggingface.co/datasets/HuggingFaceTB/smollm-corpus). The `HuggingFaceTB/smollm-corpus` dataset card declares:
 
-We release our dataset packaging, annotations, transformed reasoning traces, and other non-code additions for these two datasets under ODC-BY 1.0.
+```yaml
+license: odc-by
+```
 
-The underlying Python source-code-derived content originates from [The Stack v2](https://huggingface.co/datasets/bigcode/the-stack-v2-train-full-ids). The Stack v2 contains source files from repositories with different original licenses. Any use of raw or processed source-code-derived content must also comply with the applicable original repository licenses, including attribution and notice requirements where relevant. Please refer to upstream provenance metadata and The Stack v2 documentation for license details for individual source files.
+Accordingly, the released Annoy PythonEdu datasets use the same direct upstream data-source license: [Open Data Commons Attribution License (ODC-BY 1.0)](https://opendatacommons.org/licenses/by/1-0/).
 
-In short:
+## Synthesis model
 
-- Dataset packaging/annotations/transformed Annoy additions: ODC-BY 1.0.
-- Underlying source-code-derived content: governed by the original licenses of the source repositories as surfaced through The Stack v2 provenance metadata.
-- Users should attribute Annoy and the upstream datasets, and should satisfy any original license requirements for source-code-derived material they reuse.
+The natural-language transformations/reasoning traces were synthesized with [DeepSeek-V2.5](https://huggingface.co/deepseek-ai/DeepSeek-V2.5), whose model card links to the [DeepSeek License Agreement](https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-MODEL). Section 6 of that license states that DeepSeek claims no rights in model outputs, subject to the license terms and lawful use.
+
+Therefore, we do not apply a newly invented license to the synthesized outputs. The dataset release follows the direct data-source license above, while use of the synthesis model itself is governed by the DeepSeek License Agreement.
+
+## Underlying source-code content
+
+The Python-Edu subset traces back to [The Stack v2](https://huggingface.co/datasets/bigcode/the-stack-v2-train-full-ids), where source files come from repositories with different original licenses. Any use of raw or processed source-code-derived content must also comply with the applicable original repository licenses, including attribution and notice requirements where relevant. Please refer to upstream provenance metadata and The Stack v2 documentation for license details for individual source files.
+
+## Summary
+
+- Annoy-PythonEdu-Rs / Annoy-PythonEdu-Rs-Raw dataset release: ODC-BY 1.0, reused from the direct upstream data source `HuggingFaceTB/smollm-corpus`.
+- Model used for synthesis: DeepSeek-V2.5 under the DeepSeek License Agreement; DeepSeek's license says it claims no rights in outputs.
+- Underlying source-code-derived content: also subject to original source repository licenses surfaced through The Stack v2 provenance metadata.
 
 ## Upstream references
 
 - HuggingFaceTB/smollm-corpus: https://huggingface.co/datasets/HuggingFaceTB/smollm-corpus
+- DeepSeek-V2.5: https://huggingface.co/deepseek-ai/DeepSeek-V2.5
+- DeepSeek License Agreement: https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-MODEL
 - The Stack v2 train full IDs: https://huggingface.co/datasets/bigcode/the-stack-v2-train-full-ids
 - ODC-BY 1.0: https://opendatacommons.org/licenses/by/1-0/
